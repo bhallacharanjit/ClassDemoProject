@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, retain) NSArray * recordsArray;
 
+
+
+@property (nonatomic, retain) NSMutableDictionary * sectionedArrayDictionary;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -21,6 +21,44 @@
     
     self.recordsArray = [[NSArray alloc] initWithObjects:@"1",@"Obj 2",@"Obj 3",@" 4", nil];
     
+    
+    self.sectionedArrayDictionary = [[NSMutableDictionary alloc] init];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S1"];
+    
+    
+    self.recordsArray = [[NSArray alloc] initWithObjects:@"adsjkgha",@"adjksf",@"adhjsgk", nil];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S2"];
+    
+    
+    self.recordsArray = [[NSArray alloc] initWithObjects:@"w",@"e",@"d", nil];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S3"];
+    
+    
+    
+    self.recordsArray = [[NSArray alloc] initWithObjects:@"z",@"fg",@"g", nil];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S4"];
+    
+    
+    
+    self.recordsArray = [[NSArray alloc] initWithObjects:@"z2",@"fg3",@"g4", nil];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S5"];
+    
+    
+    
+    
+    self.recordsArray = [[NSArray alloc] initWithObjects:@"zdsfg",@"fsdfg",@"gasd", nil];
+    
+    [self.sectionedArrayDictionary setObject:self.recordsArray forKey:@"S6"];
+    
+    
+    
+    
+    
 }
 
 /*
@@ -35,16 +73,39 @@
 
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return self.sectionedArrayDictionary.count;
 }
 
 -(NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return  self.recordsArray.count;
+    
+    
+    NSArray * keys = [self.sectionedArrayDictionary allKeys];
+    
+    NSString * str = [keys objectAtIndex:section];
+    
+    NSLog(@"Key Name is %@",str);
+    NSArray * arr = [self.sectionedArrayDictionary objectForKey:str];
+    return arr.count;
+    
+    
+//
+//    if (section == 0) {
+//        NSArray * arr = [self.sectionedArrayDictionary objectForKey:@"S1"];
+//        return arr.count;
+//    } else if (section == 1) {
+//        NSArray * arr = [self.sectionedArrayDictionary objectForKey:@"S2"];
+//        return arr.count;
+//    }
+//    return 0;
 }
 
 
 -(NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return @"Header";
+    NSArray * keys = [self.sectionedArrayDictionary allKeys];
+    
+    NSString * str = [keys objectAtIndex:section];
+    
+    return str;
 }
 
 
@@ -58,8 +119,16 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
     }
     
-    cell.textLabel.text = [self.recordsArray objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = @"Subtitle";
+    
+    NSArray * keys = [self.sectionedArrayDictionary allKeys];
+    
+    NSString * str = [keys objectAtIndex:indexPath.section];
+    
+    NSLog(@"Key Name is %@",str);
+    NSArray * arr = [self.sectionedArrayDictionary objectForKey:str];
+    
+    cell.textLabel.text = [arr objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = str;
     
     [cell.imageView setImage:[UIImage imageNamed:@"add_icon"]];
     
@@ -69,7 +138,15 @@
 
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"%@",[self.recordsArray objectAtIndex:indexPath.row]);
+    
+    NSArray * keys = [self.sectionedArrayDictionary allKeys];
+    
+    NSString * str = [keys objectAtIndex:indexPath.section];
+    
+    NSLog(@"Key Name is %@",str);
+    NSArray * arr = [self.sectionedArrayDictionary objectForKey:str];
+    
+    NSLog(@"%@",[arr objectAtIndex:indexPath.row]);
 }
 
 @end
