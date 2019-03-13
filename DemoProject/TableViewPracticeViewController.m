@@ -7,6 +7,7 @@
 //
 
 #import "TableViewPracticeViewController.h"
+#import "CustomTableViewCell.h"
 
 @interface TableViewPracticeViewController ()
 
@@ -109,15 +110,20 @@
 }
 
 
+-(CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 100.0f;
+}
+
+
 -(UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     NSString * identifier = @"TableCell";
     
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    CustomTableViewCell * cell = (CustomTableViewCell *) [tableView dequeueReusableCellWithIdentifier:identifier];
     
-    if (cell == nil)  {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
+//    if (cell == nil)  {
+//        cell = [[CustomTableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:identifier];
+//    }
     
     
     NSArray * keys = [self.sectionedArrayDictionary allKeys];
@@ -127,10 +133,10 @@
     NSLog(@"Key Name is %@",str);
     NSArray * arr = [self.sectionedArrayDictionary objectForKey:str];
     
-    cell.textLabel.text = [arr objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = str;
+    cell.mName.text = [arr objectAtIndex:indexPath.row];
+    cell.mAddress.text = str;
     
-    [cell.imageView setImage:[UIImage imageNamed:@"add_icon"]];
+    [cell.mImageView setImage:[UIImage imageNamed:@"add_icon"]];
     
     return cell;
 }

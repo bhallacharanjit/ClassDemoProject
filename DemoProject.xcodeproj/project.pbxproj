@@ -16,6 +16,7 @@
 		440CB97C21FEE20B005DC32D /* DemoProjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CB97B21FEE20B005DC32D /* DemoProjectTests.m */; };
 		440CB98721FEE20B005DC32D /* DemoProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CB98621FEE20B005DC32D /* DemoProjectUITests.m */; };
 		440CB99621FEE39C005DC32D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CB99521FEE39C005DC32D /* SecondViewController.m */; };
+		443951222238E181001D9DBE /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 443951212238E181001D9DBE /* CustomTableViewCell.m */; };
 		44F38FA92223D6B000ECADAF /* TableViewPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		440CB98821FEE20B005DC32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		440CB99421FEE39C005DC32D /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		440CB99521FEE39C005DC32D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		443951202238E181001D9DBE /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		443951212238E181001D9DBE /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		44F38FA72223D6B000ECADAF /* TableViewPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewPracticeViewController.h; sourceTree = "<group>"; };
 		44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewPracticeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +123,8 @@
 				440CB99521FEE39C005DC32D /* SecondViewController.m */,
 				44F38FA72223D6B000ECADAF /* TableViewPracticeViewController.h */,
 				44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */,
+				443951202238E181001D9DBE /* CustomTableViewCell.h */,
+				443951212238E181001D9DBE /* CustomTableViewCell.m */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			files = (
 				440CB99621FEE39C005DC32D /* SecondViewController.m in Sources */,
 				44F38FA92223D6B000ECADAF /* TableViewPracticeViewController.m in Sources */,
+				443951222238E181001D9DBE /* CustomTableViewCell.m in Sources */,
 				440CB96721FEE207005DC32D /* ViewController.m in Sources */,
 				440CB97221FEE20A005DC32D /* main.m in Sources */,
 				440CB96421FEE207005DC32D /* AppDelegate.m in Sources */,
