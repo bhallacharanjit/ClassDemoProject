@@ -136,7 +136,15 @@
     cell.mName.text = [arr objectAtIndex:indexPath.row];
     cell.mAddress.text = str;
     
-    [cell.mImageView setImage:[UIImage imageNamed:@"add_icon"]];
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0) {
+            [cell.mImageView setImage:[UIImage imageNamed:@"soul_deeper"]];
+        } else {
+            [cell.mImageView setImage:[UIImage imageNamed:@"policy_track"]];
+        }
+    } else {
+        [cell.mImageView setImage:[UIImage imageNamed:@"add_icon"]];
+    }
     
     return cell;
 }
