@@ -138,7 +138,11 @@
     SecondViewController * secondview = [self.storyboard instantiateViewControllerWithIdentifier:@"secondView"];
     secondview.myData = @"hello";
     secondview.viewController = self;
-    [self presentViewController:secondview animated:YES completion:nil];
+    
+    [self.navigationController pushViewController:secondview animated:YES];
+    
+    
+    //[self presentViewController:secondview animated:YES completion:nil];
     
     
 //    NSLog(@"%@",self.writeTextField.text);

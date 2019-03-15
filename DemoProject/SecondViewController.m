@@ -19,6 +19,7 @@
     // Do any additional setup after loading the view.
     
     NSLog(@"Value from Second View Controller %@",self.myData);
+    self.navigationController.title= @"Second";
 }
 
 
