@@ -17,6 +17,7 @@
 		440CB98721FEE20B005DC32D /* DemoProjectUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CB98621FEE20B005DC32D /* DemoProjectUITests.m */; };
 		440CB99621FEE39C005DC32D /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440CB99521FEE39C005DC32D /* SecondViewController.m */; };
 		443951222238E181001D9DBE /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 443951212238E181001D9DBE /* CustomTableViewCell.m */; };
+		449D381A225C855400A16541 /* GestureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 449D3819225C855400A16541 /* GestureViewController.m */; };
 		44F38FA92223D6B000ECADAF /* TableViewPracticeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,8 @@
 		440CB99521FEE39C005DC32D /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		443951202238E181001D9DBE /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		443951212238E181001D9DBE /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		449D3818225C855400A16541 /* GestureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GestureViewController.h; sourceTree = "<group>"; };
+		449D3819225C855400A16541 /* GestureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GestureViewController.m; sourceTree = "<group>"; };
 		44F38FA72223D6B000ECADAF /* TableViewPracticeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewPracticeViewController.h; sourceTree = "<group>"; };
 		44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewPracticeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -125,6 +128,8 @@
 				44F38FA82223D6B000ECADAF /* TableViewPracticeViewController.m */,
 				443951202238E181001D9DBE /* CustomTableViewCell.h */,
 				443951212238E181001D9DBE /* CustomTableViewCell.m */,
+				449D3818225C855400A16541 /* GestureViewController.h */,
+				449D3819225C855400A16541 /* GestureViewController.m */,
 			);
 			path = DemoProject;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				440CB99621FEE39C005DC32D /* SecondViewController.m in Sources */,
+				449D381A225C855400A16541 /* GestureViewController.m in Sources */,
 				44F38FA92223D6B000ECADAF /* TableViewPracticeViewController.m in Sources */,
 				443951222238E181001D9DBE /* CustomTableViewCell.m in Sources */,
 				440CB96721FEE207005DC32D /* ViewController.m in Sources */,

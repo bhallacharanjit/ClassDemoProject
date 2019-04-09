@@ -361,16 +361,45 @@
         <!--Home-->
         <scene sceneID="3Y3-Tb-ciE">
             <objects>
-                <viewController id="3rM-AU-ucl" sceneMemberID="viewController">
+                <viewController id="3rM-AU-ucl" customClass="GestureViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XNm-Jj-5FK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="gHP-iz-lGs"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="EJF-7H-HH3" appends="YES" id="3Zh-5h-mxJ"/>
+                            <outletCollection property="gestureRecognizers" destination="Kro-z1-IPa" appends="YES" id="toI-nF-3F0"/>
+                            <outletCollection property="gestureRecognizers" destination="mDg-6r-dhq" appends="YES" id="YtL-oU-cow"/>
+                            <outletCollection property="gestureRecognizers" destination="uRQ-uC-sRF" appends="YES" id="f4D-9w-2AX"/>
+                            <outletCollection property="gestureRecognizers" destination="kkD-Tb-dMH" appends="YES" id="hi4-RM-EWG"/>
+                        </connections>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="add_icon" id="2vG-hc-UbQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q1c-Sc-lUl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" numberOfTouchesRequired="2" id="EJF-7H-HH3">
+                    <connections>
+                        <action selector="tappedTwice:" destination="3rM-AU-ucl" id="zhc-bp-sBB"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="2" id="Kro-z1-IPa">
+                    <connections>
+                        <action selector="longPressAction:" destination="3rM-AU-ucl" id="vsK-Nj-tPf"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <gestureRecognizer id="mDg-6r-dhq"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="uRQ-uC-sRF">
+                    <connections>
+                        <action selector="panAction:" destination="3rM-AU-ucl" id="ZHS-Rw-8G5"/>
+                    </connections>
+                </panGestureRecognizer>
+                <pinchGestureRecognizer scale="100" id="kkD-Tb-dMH">
+                    <connections>
+                        <action selector="pinchAction:" destination="3rM-AU-ucl" id="oPU-Xd-odI"/>
+                    </connections>
+                </pinchGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2902" y="-236"/>
         </scene>
